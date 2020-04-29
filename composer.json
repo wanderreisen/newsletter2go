@@ -1,0 +1,43 @@
+{
+    "name": "wanderreisen/newsletter2go",
+    "description": ":package_description",
+    "license": "license",
+    "authors": [
+        {
+            "name": "author name",
+            "email": "author email",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/wanderreisen/newsletter2go",
+    "keywords": ["Laravel", "Newsletter2Go"],
+    "require": {
+        "illuminate/support": "~5|~6|~7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3|~4",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Wanderreisen\\Newsletter2Go\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Wanderreisen\\Newsletter2Go\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Wanderreisen\\Newsletter2Go\\Newsletter2GoServiceProvider"
+            ],
+            "aliases": {
+                "Newsletter2Go": "Wanderreisen\\Newsletter2Go\\Facades\\Newsletter2Go"
+            }
+        }
+    }
+}
