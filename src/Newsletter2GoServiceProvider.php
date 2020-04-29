@@ -13,11 +13,6 @@ class Newsletter2GoServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'wanderreisen');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'wanderreisen');
-        // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
-
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();
@@ -48,7 +43,7 @@ class Newsletter2GoServiceProvider extends ServiceProvider
     {
         return ['newsletter2go'];
     }
-    
+
     /**
      * Console-specific booting.
      *
@@ -60,21 +55,6 @@ class Newsletter2GoServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../config/newsletter2go.php' => config_path('newsletter2go.php'),
         ], 'newsletter2go.config');
-
-        // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/wanderreisen'),
-        ], 'newsletter2go.views');*/
-
-        // Publishing assets.
-        /*$this->publishes([
-            __DIR__.'/../resources/assets' => public_path('vendor/wanderreisen'),
-        ], 'newsletter2go.views');*/
-
-        // Publishing the translation files.
-        /*$this->publishes([
-            __DIR__.'/../resources/lang' => resource_path('lang/vendor/wanderreisen'),
-        ], 'newsletter2go.views');*/
 
         // Registering package commands.
         // $this->commands([]);
