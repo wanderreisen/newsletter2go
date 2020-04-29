@@ -4,9 +4,9 @@
     "license": "license",
     "authors": [
         {
-            "name": "author name",
-            "email": "author email",
-            "homepage": "author homepage"
+            "name": "Konstantin Knopp",
+            "email": "k.knopp@das-unikat.com",
+            "homepage": "https://www.wanderreisen.de"
         }
     ],
     "homepage": "https://github.com/wanderreisen/newsletter2go",
