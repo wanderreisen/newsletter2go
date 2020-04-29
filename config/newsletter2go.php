@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'auth_key' => '',
+    'api_key' => env('NEWSLETTER2GO_API_KEY', ''),
 
-    'username' => '',
+    'username' => env('NEWSLETTER2GO_USERNAME', ''),
 
-    'password' => ''
+    'password' => env('NEWSLETTER2GO_PASSWORD', ''),
 ];

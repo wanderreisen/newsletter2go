@@ -11,12 +11,13 @@ class Newsletter2Go
 
     public function __construct()
     {
-        $this->api = new Newsletter2Go_REST_Api(config('newsletter2go.auth_key'), config('newsletter2go.username'), config('newsletter2go.password'));
-        $this->api->setSSLVerification(true);
+        $api = new Newsletter2Go_REST_Api(config('newsletter2go.api_key'), config('newsletter2go.username'), config('newsletter2go.password'));
+        $api->setSSLVerification(false);
+        $this->api = $api;
     }
 
-    public function getLists()
+    public function connect()
     {
-        return $this->api->getLists();
+        return $this->api;
     }
 }
